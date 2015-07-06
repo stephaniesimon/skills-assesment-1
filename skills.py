@@ -11,46 +11,41 @@ This assessment is DUE TO YOUR ADVISOR BY SUNDAY EVENING.
 """
 
 def all_odd(number_list):
+    odd_list = []
     for item in number_list:
         if item % 2 != 0:
-            return item 
-        else:
-            return []
+            odd_list.append(item)
+    return odd_list
       
 all_odd([1, 2, 7, -5])
 all_odd([2, -6, 8])
       
 
-
 def all_even(number_list):
+    even_list = []
     for item in number_list:
         if item % 2 == 0:
-            return item
-        else:
-            return []
+            even_list.append(item)
+    return even_list
 
 all_even([2, 6, -1, -2])
 all_even([-1, 3, 5])
        
 
-
 def print_indeces(my_list):
     for item in my_list:
         index_of_item = my_list.index(item)
         print index_of_item + " " + item 
-
-
-    print "Nothing at all"
+    #print "Nothing at all"
 
 
 def long_words(word_list):
+    long_word_list = []
     for word in word_list:
         if len(word) > 4:
-            return word
-    else:
-        return []
+            long_word_list.append(word)
+    return long_word_list
 
-    return []
 
 def smallest_int(number_list):
     for number in number_list:
@@ -87,7 +82,6 @@ def sum_numbers(number_list):
     for number in number_list:
         number += number 
         return number
-
     return 0
 
 
