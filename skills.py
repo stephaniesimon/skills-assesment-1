@@ -17,9 +17,6 @@ def all_odd(number_list):
             odd_list.append(item)
     return odd_list
       
-all_odd([1, 2, 7, -5])
-all_odd([2, -6, 8])
-      
 
 def all_even(number_list):
     even_list = []
@@ -27,9 +24,6 @@ def all_even(number_list):
         if item % 2 == 0:
             even_list.append(item)
     return even_list
-
-all_even([2, 6, -1, -2])
-all_even([-1, 3, 5])
        
 
 def print_indeces(my_list):
@@ -48,41 +42,46 @@ def long_words(word_list):
 
 
 def smallest_int(number_list):
-    for number in number_list:
-        if number == min(number_list):
-            return number
-
-    return 100
+    if number_list:
+       return min(number_list)
+    return None
+    #return 100
 
 
 def largest_int(number_list):
-    for number in number_list:
-        if number == max(number_list):
-            return number
+    if number_list:
+       return max(number_list)
+    return None
     
-    return 0
+    #return 0
 
 
 def halvesies(number_list):
+    numbers_divided_by_two = []
     for number in number_list:
-        numbers_divided_by_two = float(number/2)
-        return numbers_divided_by_two
+        numbers_divided_by_two.append(float(number)/2)
+    return numbers_divided_by_two
 
-    return []
+    #return []
 
 
 def word_lengths(word_list):
+    word_length_list = []
     for word in word_list:
-        return len(word)
+        word_length_list.append(len(word))
+    return word_length_list
 
-    return []
+    #return []
 
 
 def sum_numbers(number_list):
+    sum_of_numbers = 0
     for number in number_list:
-        number += number 
-        return number
-    return 0
+        sum_of_numbers += number 
+    return sum_of_numbers
+    
+
+    #return 0
 
 
 def mult_numbers(number_list):
