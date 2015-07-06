@@ -30,6 +30,8 @@ def print_indeces(my_list):
     for item in my_list:
         index_of_item = my_list.index(item)
         print index_of_item + " " + item 
+
+
     #print "Nothing at all"
 
 
@@ -45,6 +47,8 @@ def smallest_int(number_list):
     if number_list:
        return min(number_list)
     return None
+
+
     #return 100
 
 
@@ -85,38 +89,41 @@ def sum_numbers(number_list):
 
 
 def mult_numbers(number_list):
+    numbers_multiplied = 1
     for number in number_list:
-        number *= number
-        return number
+        numbers_multiplied *= number
+    return numbers_multiplied
 
-    return 0
+    #return 0
 
 
 def join_strings(word_list):
-    for item in word_list:
-        item += item
-        return "'" + str(item) + "'"
+    strings_joined = ''
+    for word in word_list:
+        strings_joined += str(word)
+    return strings_joined
 
-    return ""
+    #return ""
 
 
 def average(number_list):
-    for item in number_list:
-        item += item
-        return item
-        item = sum_items
-        average_of_sum = sum_items/2
-        return average_of_sum
+    return (sum_numbers(number_list))/len(number_list)
 
-
-    return 0
+    #return 0
 
 
 ##############################################################################
 # END OF SKILLS TEST; YOU CAN STOP HERE OR YOU CAN WORK ON ADVANCED PROBLEMS
 
 
-# def advanced_join_strings(list_of_words):
+def advanced_join_strings(list_of_words):
+    string_phrase = ""
+    for word in list_of_words:
+        string_phrase += str(word) + ", "
+    return strings_phrase
+
+
+
 #     """Return a single string with each word from the input list
 #     separated by a comma.
 #
